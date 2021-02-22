@@ -16,7 +16,7 @@ export class TodolistComponent implements OnInit {
   value1:string=""
   todo:any[]=[]
   value2:string=""
-  s:any[]=[]
+  s:any
   setvalue1(event:any){
   this.value1=(event.target as HTMLInputElement).value
   }
@@ -29,12 +29,15 @@ onItemClick(){
     console.log(this.todo)
   }
 }
-remove(){
+remove(a:any){
   {
-  this.s=this.todo
-  this.s.splice(-1)
+    this.s=this.todo.indexOf(a)
+    this.todo.splice(this.s,1)
+    console.log(this.todo)
   }
 }
 
-    }
+
+
+}
   

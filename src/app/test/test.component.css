@@ -1,0 +1,10 @@
+.blueenabled{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bluedisabled{
+    color: chartreuse;
+    font-size: 30px;
+}
