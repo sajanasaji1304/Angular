@@ -1,0 +1,16 @@
+<p>todolist works!</p>
+<div style="background-color: aqua;
+width: 40%;position: absolute;
+left: 30%;right: 30%;height: 400px;">
+<div>
+    <label for="">today</label>
+    <input type="text" (input)="setvalue1($event)">
+    <button (click)="add()">add</button>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let item of todo" (click)="onItemClick()">{{ item }}<button>move</button>
+            <button (click)="remove()">remove</button></li>
+    </ul>
+</div>
+</div>

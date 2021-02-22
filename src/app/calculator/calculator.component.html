@@ -1,0 +1,53 @@
+<p>caluclator works!</p>
+<div style="background-color: aqua;
+width: 40%;position: absolute;
+left: 30%;right: 30%;height: 400px;">
+<div>
+    <label for="">value1</label>
+
+</div>
+<div *ngIf="operator==''">
+    
+    <input type="text" value="{{value1}}" (input)="setvalue1($event)">
+</div>
+<div>
+    <label for="">value2</label>
+</div>
+<div *ngIf="value1!='' && operator!='' && value3==''" >
+    
+    <input type="text" value="{{value2}}"  (input)="setvalue2($event)" >
+</div>
+{{value1}}
+{{value2}}
+<div>
+    <label for="">result</label>
+</div>
+<div *ngIf="value1!='' && value2!=''  && operator!='' && value3!=''" >
+    
+    <input type="text" value="{{value3}}">
+</div>
+<div>
+   
+</div>
+<div>
+    <button #btn *ngFor="let number of [1,2,3]" (click)="setnumber(number)" >{{number}}</button>
+    
+    </div>
+    <div>
+        <button *ngFor="let number of [4,5,6]" (click)="setnumber(number)">{{number}}</button>
+        
+        </div>
+        <div>
+            <button *ngFor="let number of [7,8,9,0]"(click)="setnumber(number)">{{number}}</button>
+            
+            </div>
+            <div>
+                <button *ngFor="let num of ['+','-','*','/']" (click)="operat(num)">{{num}}</button>
+                <button (click)="add(operator)">=</button>
+                
+                </div>
+</div>
+
+
+
+
