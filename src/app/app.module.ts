@@ -7,18 +7,28 @@ import { SampleComponent } from './sample/sample.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { TestComponent } from './test/test.component';
-
+import {FontAwesomeModule}  from  '@fortawesome/angular-fontawesome'
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
+import { NameEditorComponent } from './name-editor/name-editor.component'
 @NgModule({
   declarations: [
     AppComponent,
     SampleComponent,
     CalculatorComponent,
     TodolistComponent,
-    TestComponent
+    TestComponent,
+    LoginComponent,
+    ProductComponent,
+    NameEditorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

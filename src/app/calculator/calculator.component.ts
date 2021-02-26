@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DateService} from '../date.service'
 
 @Component({
   selector: 'app-calculator',
@@ -10,7 +11,7 @@ export class CalculatorComponent implements OnInit {
   value2:any
   value3:any=0
   operator:string=""
-  numbers:string=''
+  numbers:any
   
 
   operat(opr:any){
@@ -33,7 +34,7 @@ export class CalculatorComponent implements OnInit {
 
       this.value1=num
       //console.log(this.value1)
-      //this.value1=this.numbe
+      //this.value1=this.number
     }
     else{
       this.value2=num
@@ -44,7 +45,9 @@ export class CalculatorComponent implements OnInit {
   
    
 
-  constructor() { }
+  constructor(private obj:DateService) {
+    this.obj=obj
+   }
   add(cal:any){
     if(cal=="+"){
     this.value3=parseInt(this.value1)+parseInt(this.value2)
@@ -66,6 +69,7 @@ export class CalculatorComponent implements OnInit {
  
 
   ngOnInit(): void {
+    console.log("inside calculator" ,this.obj.getDate())
   }
   
   

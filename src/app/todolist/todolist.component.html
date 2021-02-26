@@ -1,16 +1,20 @@
-<p>todolist works!</p>
-<div style="background-color: aqua;
-width: 40%;position: absolute;
-left: 30%;right: 30%;height: 400px;">
-<div>
-    <label for="">today</label>
-    <input type="text" (input)="setvalue1($event)">
-    <button (click)="add()">add</button>
-</div>
-<div>
-    <ul>
-        <li *ngFor="let item of todo" (click)="onItemClick()">{{ item }}<button>move</button>
-            <button (click)="remove()">remove</button></li>
-    </ul>
-</div>
-</div>
+<div class="row"></div>
+<div class="col-sm-6">
+ <h2><u>TODO </u></h2>
+ <div> 
+    <input type="text" name="" id="task" value="{{task}}" class="form-control"(input)="addtask($event)"></div>
+ <div ><button (click)="add()">+</button>
+    <button (click)="clear()">clear</button></div>
+ <div><li *ngFor="let  a of todo">{{a}}
+    <button (click)="remove(a)">remove</button>
+    <button (click)="move(a)">move</button></li>
+ </div>
+ </div>
+<div class="col-sm-6">
+    <h2><u> TOMORROW</u></h2>
+ <div> <li *ngFor="let a of  x">{{a}}
+ <button (click)="del(a)">  delete</button>
+ </li></div>
+ <div id="tmr"></div>
+ 
+ 

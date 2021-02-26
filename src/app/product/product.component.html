@@ -34,29 +34,41 @@
       </div>
     </div>
   </nav>
-<router-outlet></router-outlet>
 
 
 
+<form action="">
+<div class=form-group>
+    <label for="">productid</label>
 
+</div>
+<div>
+    
+    <input class=form-control [(ngModel)]="model.productid" type="number" name="productid">
+</div>
+<div class=form-group>
+    <label for="">name</label>
 
-<!-- <p>test works!</p>
-<p>test works!</p>
-<ul>
-    <li *ngFor="let  name of names">{{name}}</li>
-</ul> 
-<select >
-    <option *ngFor="let color of colors">{{color}}</option>
-</select>
-<p [ngStyle]="check=='true'?style1:style2">hai</p>
-<p [ngClass]="'blueenabled'">welcome home</p>
-<p [ngClass]="check=='true'?'blueenabled':'blueendisabled'">hai</p>
-<select (change)="color=$event.target.value">
-    <option value="red">red</option>
-    <option value="blue">blue</option>
-    <option value="yellow">yellow</option>
-</select>
-{{color}}
-<fa-icon [icon]="calendar"></fa-icon>
-<fa-icon [icon]="coffee"></fa-icon> -->
+</div>
+<div>
+    
+    <input class=form-control [(ngModel)]="model.name" type="text" name="name">
+</div>
+<div class=form-group>
+    <label for="">price</label>
 
+</div>
+<div>
+    
+    <input class=form-control [(ngModel)]="model.price" type="number" name="price">
+</div>
+<div class=form-group>
+    <label for="">description</label>
+
+</div>
+<div>
+    
+    <input class=form-control [(ngModel)]="model.description" type="text" name="description">
+</div>
+</form>
+<button (click)=save()>save</button>
