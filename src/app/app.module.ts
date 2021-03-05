@@ -11,7 +11,10 @@ import {FontAwesomeModule}  from  '@fortawesome/angular-fontawesome'
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
-import { NameEditorComponent } from './name-editor/name-editor.component'
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ClasstestComponent } from './classtest/classtest.component';
+import { Classtest1Component } from './classtest1/classtest1.component';
+import { ProductlistComponent } from './productlist/productlist.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,10 @@ import { NameEditorComponent } from './name-editor/name-editor.component'
     TestComponent,
     LoginComponent,
     ProductComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    ClasstestComponent,
+    Classtest1Component,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
