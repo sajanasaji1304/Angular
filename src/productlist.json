@@ -1,0 +1,11 @@
+[{"pid": "1", "pname": "soap", "pprice": 43, "pdes": "ddrrthbn"},
+
+    {"pid": "2", "pname": "powder", "pprice": 123, "pdes": "any"},
+    
+    {"pid": "3", "pname": "laptop", "pprice": 7000, "pdes": "good"},
+    
+    {"pid": "4", "pname": "mobile", "pprice": 800, "pdes": "vgood"},
+    
+    {"pid": "5", "pname": "screen", "pprice": 12333, "pdes": "any"}]
+    
+        

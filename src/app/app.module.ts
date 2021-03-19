@@ -14,7 +14,13 @@ import { ProductComponent } from './product/product.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ClasstestComponent } from './classtest/classtest.component';
 import { Classtest1Component } from './classtest1/classtest1.component';
-import { ProductlistComponent } from './productlist/productlist.component'
+// import { ProductlistComponent } from './productlist/productlist.component';
+// import { Productlist1Component } from './productlist1/productlist1.component';
+import { ServiceComponent } from './service/service.component'
+import {CustomerModule} from './customer/customer.module'
+import {AngularFireDatabaseModule} from '@angular/fire/database'
+import {environment} from '../environments/environment'
+import { AngularFireModule } from '@angular/fire';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +33,20 @@ import { ProductlistComponent } from './productlist/productlist.component'
     NameEditorComponent,
     ClasstestComponent,
     Classtest1Component,
-    ProductlistComponent
+    // ProductlistComponent,
+    // Productlist1Component,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    CustomerModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
