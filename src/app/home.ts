@@ -9,5 +9,6 @@ export class Home {
         this.password=pass
         this.mob=mobile
         this.email=email
+        
 }
 }

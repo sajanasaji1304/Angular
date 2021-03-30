@@ -31,10 +31,32 @@
         
         <input class=form-control [(ngModel)]="home.email" type="text" name="email">
     </div>
+    <div *ngFor="user.id==''">
+        <input type="submit"  value="save">
+    </div>
+    <div *ngFor="user.id==''">
+        <input type="submit" value="update">
+    </div>
+    
     </form>
     <button (click)=save()>save</button>
     <div>
-        <li *ngFor="let a of userlist">{{a}}</li>
+        <table border="1" style="width: 100%;"  >
+    <thead>
+        <tr *ngFor="let arr of userlist">
+            <td>{{arr.id}}</td>
+            <td>{{arr.username}}</td>
+            <td>{{arr.password}}</td>
+            <td>{{arr.mob}}</td>
+            <td>{{arr.email}}</td>
+            <button (click)='edit(arr)'>edit</button>
+            <button (click)='delete(arr)'>delete</button>
+
+     
+         </tr>
+         </thead>
+        </table>
     </div>
+
     
     

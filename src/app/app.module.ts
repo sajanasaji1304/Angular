@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import {CustomerModule} from './customer/customer.module'
 import {AngularFireDatabaseModule} from '@angular/fire/database'
 import {environment} from '../environments/environment'
 import { AngularFireModule } from '@angular/fire';
+import { OpencloseComponent } from './openclose/openclose.component';
+import { ImageComponent } from './image/image.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,9 +39,12 @@ import { AngularFireModule } from '@angular/fire';
     // ProductlistComponent,
     // Productlist1Component,
     ServiceComponent,
+    OpencloseComponent,
+    ImageComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
